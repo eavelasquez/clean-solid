@@ -22,8 +22,8 @@
   ]; // good: descriptive name and pluralized name
 
   // example 4: list of users emails
-  const emails = people.map(p => p.email); // bad: non-descriptive name
-  const userEmails: string[] = users.map(user => user.email); // good: descriptive name and pluralized name
+  const emails = people.map((p) => p.email); // bad: non-descriptive name
+  const userEmails: string[] = users.map((user) => user.email); // good: descriptive name and pluralized name
 
   // example 5: boolean variables of a videogame
   const jump = false; // bad: non-descriptive name
@@ -80,4 +80,4 @@
   function printJob() {
     throw new Error('Not implemented');
   } // good: descriptive name
-})
+});

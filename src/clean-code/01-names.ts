@@ -14,7 +14,7 @@
   ];
 
   // files to delete
-  const files = fs.map(f => f.f);
+  const files = fs.map((f) => f.f);
 
   // example 2
   // good: names are descriptive
@@ -31,19 +31,19 @@
   ];
 
   // files to delete
-  const filesToDelete = filesToEvaluate.map(file => file.marked);
+  const filesToDelete = filesToEvaluate.map((file) => file.marked);
 
   // example 3
   // bad: names are redundant
-  class AbstractUser { };
-  class UserMixin { };
-  class UserImplementation { };
-  interface IUser { };
+  class AbstractUser { }
+  class UserMixin { }
+  class UserImplementation { }
+  interface IUser { }
 
   // example 4
   // good: names are meaningful
-  class User { };
-  interface User { };
+  class User { }
+  interface User { }
 
   // TODO: task 1 - add descriptive names for the following variables
 
