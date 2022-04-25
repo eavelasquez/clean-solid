@@ -119,4 +119,4 @@
 
   // call workingSteps function
   console.log({ workingSteps: workingSteps() }); // 'Working steps are done!'
-});
+})();

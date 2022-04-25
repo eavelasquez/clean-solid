@@ -111,4 +111,4 @@
 
     return isRetired ? 3000 : 4000;
   } // ✅ good: without nested if-else
-});
+})();

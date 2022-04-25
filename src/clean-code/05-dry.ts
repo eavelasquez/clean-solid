@@ -55,4 +55,4 @@ class Product {
 
   console.group('products');
   products.forEach(product => console.log(product.toString()));
-})
+})();

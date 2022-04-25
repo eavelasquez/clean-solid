@@ -66,4 +66,4 @@
 
   const max = 6; // ❌ bad: max is not descriptive
   const maxClassesPerStudent = 6; // ✅ good: maxClassesPerStudent is descriptive
-});
+})();
