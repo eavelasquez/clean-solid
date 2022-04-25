@@ -10,14 +10,14 @@
     } else {
       return false;
     }
-  } // bad: use triple-equals
+  } // ❌ bad: use triple-equals
 
   // hints: includes? arrays?
   function isRedFruit(fruit: string): boolean {
     const fruits: string[] = ['apple', 'cherry', 'plum'];
 
     return fruits.includes(fruit);
-  } // good: use includes
+  } // ✅ good: use includes
 
   // TODO: simplify this function
   function getFruitsByColor(color: string): string[] {
@@ -32,7 +32,7 @@
     } else {
       throw new Error('unknown color, must be red, yellow, purple or green');
     }
-  } // bad: use if-else-if-else
+  } // ❌ bad: use if-else-if-else
 
   // hints: switch? object literal? type? validate possible colors
   type FruitColor = 'red' | 'yellow' | 'purple' | 'green';
@@ -63,7 +63,7 @@
     //   default:
     //     throw new Error('unknown color, must be red, yellow, purple or green');
     // }
-  } // good: use switch or object literal
+  } // ✅ good: use switch or object literal
 
   // TODO: simplify this function
   const isFirstStepWorking = true;
@@ -89,7 +89,7 @@
     } else {
       return 'First step is not working.';
     }
-  } // bad: nested if-else
+  } // ❌ bad: nested if-else
 
   // hints: validate each step
   function workingSteps(): string {
@@ -104,7 +104,7 @@
     if (message.length === 0) message = 'Working steps are done!';
 
     return message;
-  } // good: without nested if-else
+  } // ✅ good: without nested if-else
 
   // call isRedFruit function
   console.log({ isRedFruit: isRedFruit('cherry'), fruit: 'cherry' }); // isRedFruit: true, fruit: 'cherry'

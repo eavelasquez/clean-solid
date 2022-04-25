@@ -3,7 +3,7 @@
  */
 ((): void => {
   // example 1
-  // bad: names are not descriptive
+  // ❌ bad: names are not descriptive
 
   // files to evaluate
   const fs = [
@@ -20,7 +20,7 @@
   const files = fs.map((f) => f.f);
 
   // example 2
-  // good: names are descriptive
+  // ✅ good: names are descriptive
 
   // files to evaluate
   const filesToEvaluate = [
@@ -37,34 +37,33 @@
   const filesToDelete = filesToEvaluate.map((file) => file.marked);
 
   // example 3
-  // bad: names are redundant
+  // ❌ bad: names are redundant
   class AbstractUser { }
   class UserMixin { }
   class UserImplementation { }
   interface IUser { }
 
   // example 4
-  // good: names are meaningful
+  // ✅ good: names are meaningful
   class User { }
   interface User { }
 
   // TODO: task 1 - add descriptive names for the following variables
+  const ddmmyyyy = new Date(); // ❌ bad: ddmmyyyy is not descriptive
+  const today = new Date(); // ✅ good: today is descriptive
 
-  const ddmmyyyy = new Date(); // bad: ddmmyyyy is not descriptive
-  const today = new Date(); // good: today is descriptive
+  const d: number = 23; // ❌ bad: d is not descriptive
+  const elapsedTimeInDays: number = 23; // ✅ good: elapsedTimeInDays is descriptive
 
-  const d: number = 23; // bad: d is not descriptive
-  const elapsedTimeInDays: number = 23; // good: elapsedTimeInDays is descriptive
+  const dir = 33; // ❌ bad: dir is not descriptive
+  const numberFilesOfDirectory = 33; // ✅ good: numberFilesOfDirectory is descriptive
 
-  const dir = 33; // bad: dir is not descriptive
-  const numberFilesOfDirectory = 33; // good: numberFilesOfDirectory is descriptive
+  const name = 'Ai'; // ❌ bad: name is not descriptive
+  const firstName = 'Ai'; // ✅ good: firstName is descriptive
 
-  const name = 'Ai'; // bad: name is not descriptive
-  const firstName = 'Ai'; // good: firstName is descriptive
+  const dms = 12; // ❌ bad: dms is not descriptive
+  const daysSinceLastModification = 12; // ✅ good: daysSinceLastModification is descriptive
 
-  const dms = 12; // bad: dms is not descriptive
-  const daysSinceLastModification = 12; // good: daysSinceLastModification is descriptive
-
-  const max = 6; // bad: max is not descriptive
-  const maxClassesPerStudent = 6; // good: maxClassesPerStudent is descriptive
+  const max = 6; // ❌ bad: max is not descriptive
+  const maxClassesPerStudent = 6; // ✅ good: maxClassesPerStudent is descriptive
 });
