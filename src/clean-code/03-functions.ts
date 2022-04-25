@@ -80,4 +80,25 @@
     console.log('actor created', { fullName, birthDate });
     return true;
   } // good: name does what it says and single responsibility principle
+
+  // example 7: function to get pay amount
+  const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }) => {
+    let result;
+
+    if (isDead) {
+      result = 1500;
+    } else {
+      if (isSeparated) {
+        result = 2500;
+      } else {
+        if (isRetired) {
+          result = 3000;
+        } else {
+          result = 4000;
+        }
+      }
+    }
+
+    return result;
+  } // bad: nested if-else
 });
