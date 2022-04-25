@@ -1,3 +1,4 @@
+// Before executing, comment functions with the TODO comment
 (() => {
   // TODO: solve without the triple-equals
   function isRedFruit(fruit: string): boolean {
@@ -9,6 +10,11 @@
   } // bad: use triple-equals
 
   // hints: includes? arrays?
+  function isRedFruit(fruit: string): boolean {
+    const fruits = ['apple', 'cherry', 'plum'];
+
+    return fruits.includes(fruit);
+  } // good: use includes
 
   // TODO: simplify this function
   function getFruitsByColor(color: string): string[] {
@@ -26,6 +32,36 @@
   } // bad: use if-else-if-else
 
   // hints: switch? object literal? type? validate possible colors
+  type FruitColor = 'red' | 'yellow' | 'purple' | 'green';
+
+  function getFruitsByColor(color: FruitColor): string[] {
+    const fruitsByColor: { [key: string]: string[] } = {
+      red: ['apple', 'cherry', 'plum'],
+      yellow: ['banana', 'pineapple'],
+      purple: ['grape', 'blackberry'],
+      green: ['kiwi', 'avocado'],
+    };
+
+    // validate if color is valid
+    if (!Object.keys(fruitsByColor).includes(color)) {
+      throw new Error('unknown color, must be red, yellow, purple or green');
+    }
+
+    return fruitsByColor[color];
+
+    // switch (color) {
+    //   case 'red':
+    //     return ['apple', 'cherry', 'plum'];
+    //   case 'yellow':
+    //     return ['banana', 'pineapple'];
+    //   case 'purple':
+    //     return ['grape', 'blackberry'];
+    //   case 'green':
+    //     return ['kiwi', 'avocado'];
+    //   default:
+    //     throw new Error('unknown color, must be red, yellow, purple or green');
+    // }
+  } // good: use switch or object literal
 
   // TODO: simplify this function
   const isFirstStepWorking = true;
@@ -52,6 +88,21 @@
       return 'First step is not working.';
     }
   } // bad: nested if-else
+
+  // hints: validate each step, if none failed, return 'Working steps are done!'
+  function workingSteps(): string {
+    const message = !isFirstStepWorking
+      ? 'First step is not working.'
+      : !isSecondStepWorking
+        ? 'Second step is not working.'
+        : !isThirdStepWorking
+          ? 'Third step is not working.'
+          : !isFourthStepWorking
+            ? 'Fourth step is not working.'
+            : 'Working steps are done!';
+
+    return message;
+  } // good: use ternary operator
 
   // call isRedFruit function
   console.log({ isRedFruit: isRedFruit('cherry'), fruit: 'cherry' }); // isRedFruit: true, fruit: 'cherry'
