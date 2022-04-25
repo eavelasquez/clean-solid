@@ -1,4 +1,7 @@
-(() => {
+/**
+ * self-executing anonymous function
+ */
+((): void => {
   // example 1: celsius temperature array
   const arrayOfNums = [33.6, 12.34]; // bad: non-descriptive name
   const celsiusTemperatures: number[] = [33.6, 12.34]; // good: descriptive name and pluralized name

@@ -1,5 +1,8 @@
-// Before executing, comment functions with the TODO comment
-(() => {
+/**
+ * self-executing anonymous function
+ * note: before executing, comment functions with the TODO comment
+ */
+((): void => {
   // TODO: solve without the triple-equals
   function isRedFruit(fruit: string): boolean {
     if (fruit === 'apple' || fruit === 'cherry' || fruit === 'plum') {

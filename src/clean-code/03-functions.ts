@@ -1,4 +1,7 @@
-(() => {
+/**
+ * self-executing anonymous function
+ */
+((): void => {
   // example 1: function to get information of a movie by id
   function getAllMovies(movieId: string) {
     console.log({ movieId });

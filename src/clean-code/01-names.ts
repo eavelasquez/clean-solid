@@ -1,4 +1,7 @@
-(() => {
+/**
+ * self-executing anonymous function
+ */
+((): void => {
   // example 1
   // bad: names are not descriptive
 
