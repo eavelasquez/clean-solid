@@ -11,7 +11,7 @@
 
   // hints: includes? arrays?
   function isRedFruit(fruit: string): boolean {
-    const fruits = ['apple', 'cherry', 'plum'];
+    const fruits: string[] = ['apple', 'cherry', 'plum'];
 
     return fruits.includes(fruit);
   } // good: use includes
@@ -48,7 +48,6 @@
     }
 
     return fruitsByColor[color];
-
     // switch (color) {
     //   case 'red':
     //     return ['apple', 'cherry', 'plum'];
@@ -89,20 +88,20 @@
     }
   } // bad: nested if-else
 
-  // hints: validate each step, if none failed, return 'Working steps are done!'
+  // hints: validate each step
   function workingSteps(): string {
-    const message = !isFirstStepWorking
-      ? 'First step is not working.'
-      : !isSecondStepWorking
-        ? 'Second step is not working.'
-        : !isThirdStepWorking
-          ? 'Third step is not working.'
-          : !isFourthStepWorking
-            ? 'Fourth step is not working.'
-            : 'Working steps are done!';
+    let message: string = '';
+
+    if (!isFirstStepWorking) message += 'First step is not working. ';
+    if (!isSecondStepWorking) message += 'Second step is not working. ';
+    if (!isThirdStepWorking) message += 'Third step is not working. ';
+    if (!isFourthStepWorking) message += 'Fourth step is not working. ';
+
+    // if no step failed, message will be 'Working steps are done!'
+    if (message.length === 0) message = 'Working steps are done!';
 
     return message;
-  } // good: use ternary operator
+  } // good: without nested if-else
 
   // call isRedFruit function
   console.log({ isRedFruit: isRedFruit('cherry'), fruit: 'cherry' }); // isRedFruit: true, fruit: 'cherry'
