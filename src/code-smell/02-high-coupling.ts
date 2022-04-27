@@ -7,21 +7,23 @@
   class Person {
     constructor(
       public birthDate: Date,
+      public firstName: string,
       public gender: Gender,
-      public name: string
-    ) {}
+      public lastName: string
+    ) { }
   }
 
   class User extends Person {
     constructor(
       birthDate: Date,
+      firstName: string,
       gender: Gender,
-      name: string,
+      lastName: string,
       private lastAccessDate: Date,
       public email: string,
       public role: string
     ) {
-      super(birthDate, gender, name);
+      super(birthDate, firstName, gender, lastName);
       this.lastAccessDate = new Date();
     }
 
@@ -34,22 +36,24 @@
     constructor(
       birthDate: Date,
       email: string,
+      firstName: string,
       gender: Gender,
-      name: string,
+      lastName: string,
       public lastOpenFolder: string,
       public workingDirectory: string,
       role: string
     ) {
-      super(birthDate, gender, name, new Date(), email, role);
+      super(birthDate, firstName, gender, lastName, new Date(), email, role);
     }
   }
 
   const userSettings = new UserSettings(
     new Date('2001-01-01'),
     'ai@google.com',
-    'female',
     'Ai',
+    'female',
     '/usr/home',
+    'Tanaka',
     '/development',
     'developer'
   );
