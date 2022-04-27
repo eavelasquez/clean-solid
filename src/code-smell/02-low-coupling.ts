@@ -6,23 +6,26 @@
 
   interface PersonProps {
     birthDate: Date;
+    firstName: string;
     gender: Gender;
-    name: string;
+    lastName: string;
   }
 
   class Person {
     public birthDate: Date;
+    public firstName: string;
     public gender: Gender;
-    public name: string;
+    public lastName: string;
 
-    constructor({ birthDate, gender, name }: PersonProps) {
+    constructor({ birthDate, firstName, gender, lastName }: PersonProps) {
       this.birthDate = birthDate;
+      this.firstName = firstName;
       this.gender = gender;
-      this.name = name;
+      this.lastName = lastName;
     }
 
     greet(): string {
-      return `Hello, ${this.name}`;
+      return `Hello, ${this.firstName} ${this.lastName}`;
     }
   }
 
@@ -33,7 +36,7 @@
 
   class User {
     public email: string;
-    public lastAccessDate: Date;
+    private lastAccessDate: Date;
     public role: string;
 
     constructor({ email, role }: UserProps) {
@@ -65,9 +68,10 @@
   interface UserSettingsProps {
     birthDate: Date;
     email: string;
+    firstName: string;
     gender: Gender;
     lastOpenFolder: string;
-    name: string;
+    lastName: string;
     role: string;
     workingDirectory: string;
   }
@@ -81,13 +85,14 @@
     constructor({
       birthDate,
       email,
+      firstName,
       gender,
+      lastName,
       lastOpenFolder,
-      name,
       role,
       workingDirectory,
     }: UserSettingsProps) {
-      this.person = new Person({ name, gender, birthDate });
+      this.person = new Person({ birthDate, firstName, gender, lastName });
       this.user = new User({ email, role });
       this.settings = new Settings({ lastOpenFolder, workingDirectory });
     }
@@ -96,10 +101,11 @@
   const userSettings = new UserSettings({
     birthDate: new Date('2001-01-01'),
     email: 'ai@google.com',
+    firstName: 'Ai',
     gender: 'female',
+    lastName: 'Tanaka',
     lastOpenFolder: '/home',
-    name: 'Ai',
-    role: 'admin',
+    role: 'developer',
     workingDirectory: '/usr/home',
   });
 
