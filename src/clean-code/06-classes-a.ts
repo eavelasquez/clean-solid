@@ -1,5 +1,5 @@
-(() => {
-  // Without applying the Single Responsibility Principle
+((): void => {
+  // ❌ Without applying the Single Responsibility Principle
 
   type Gender = 'male' | 'female';
 

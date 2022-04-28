@@ -1,6 +1,6 @@
-(() => {
-  // Without applying the Single Responsibility Principle
-  // With high coupling, we can't separate the concerns
+((): void=> {
+  // ❌ Without applying the Single Responsibility Principle
+  // ❌ With high coupling, we can't separate the concerns
 
   type Gender = 'male' | 'female';
 

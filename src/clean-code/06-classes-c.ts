@@ -1,6 +1,6 @@
-(() => {
-  // With applying the Single Responsibility Principle
-  // Prioritize composition over inheritance
+((): void => {
+  // ✅ With applying the Single Responsibility Principle
+  // ✅ Prioritize composition over inheritance
 
   type Gender = 'male' | 'female';
 

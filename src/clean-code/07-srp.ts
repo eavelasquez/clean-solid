@@ -1,5 +1,5 @@
-(() => {
-  // Without applying the Single Responsibility Principle
+((): void => {
+  // ❌ Without applying the Single Responsibility Principle
 
   type HtmlType = 'input' | 'select' | 'textarea' | 'radio';
 
@@ -28,9 +28,9 @@
   console.log({ nameField });
 })();
 
-(() => {
-  // With applying the Single Responsibility Principle
-  // Prioritize composition over inheritance
+((): void => {
+  // ✅ With applying the Single Responsibility Principle
+  // ✅ Prioritize composition over inheritance
 
   type HtmlType = 'input' | 'select' | 'textarea' | 'radio';
 
