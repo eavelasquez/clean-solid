@@ -1,3 +1,7 @@
+// note: uncomment the block without or with Open-Close Principle
+// select the block (/* */) to test and press Ctrl+Shift+A to uncomment
+// and comment the other block
+
 // ❌ Without Open-Close Principle
 /* import { TodoService, PhotoService, PostService } from './02-open-close-b';
 
