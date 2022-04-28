@@ -1,5 +1,6 @@
 import './style.css'
 import './clean-code/05-dry'
+import './solid/02-open-close-a'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
