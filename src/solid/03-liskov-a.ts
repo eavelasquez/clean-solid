@@ -1,3 +1,5 @@
+// ❌ With Liskov Substitution Principle
+// ❌ Without Open-Close Principle
 import { Tesla, Audi, Toyota, Honda, Volvo } from './03-liskov-b';
 
 ((): void => {

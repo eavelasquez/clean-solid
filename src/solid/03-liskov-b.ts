@@ -1,3 +1,4 @@
+// ❌ Without Liskov Substitution Principle
 export class Tesla {
   constructor(private numberOfSeats: number) { }
 
