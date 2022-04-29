@@ -1,5 +1,5 @@
 // ✅ With Liskov Substitution Principle
-// ❌ Without Open-Close Principle
+// ✅ Without Open-Close Principle
 export abstract class Vehicle {
   constructor() { }
 
@@ -72,37 +72,9 @@ export class Ford extends Vehicle {
 
 ((): void => {
   const printCarSeats = (cars: Vehicle[]): void => {
-    for (const car of cars) {
-      if (car instanceof Tesla) {
-        console.log(`Tesla has ${car.getNumberOfSeats()} seats.`);
-        continue;
-      }
-
-      if (car instanceof Audi) {
-        console.log(`Audi has ${car.getNumberOfSeats()} seats.`);
-        continue;
-      }
-
-      if (car instanceof Toyota) {
-        console.log(`Toyota has ${car.getNumberOfSeats()} seats.`);
-        continue;
-      }
-
-      if (car instanceof Honda) {
-        console.log(`Honda has ${car.getNumberOfSeats()} seats.`);
-        continue;
-      }
-
-      if (car instanceof Volvo) {
-        console.log(`Volvo has ${car.getNumberOfSeats()} seats.`);
-        continue;
-      }
-
-      if (car instanceof Ford) {
-        console.log(`Ford has ${car.getNumberOfSeats()} seats.`);
-        continue;
-      }
-    }
+    cars.forEach((car: Vehicle) => {
+      console.log(`${car.constructor.name} has ${car.getNumberOfSeats()} seats`);
+    });
   };
 
   const cars: Vehicle[] = [
