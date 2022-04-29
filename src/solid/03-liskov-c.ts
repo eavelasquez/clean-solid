@@ -1,3 +1,5 @@
+// ✅ With Liskov Substitution Principle
+// ❌ Without Open-Close Principle
 export abstract class Vehicle {
   constructor() { }
 
@@ -58,6 +60,16 @@ export class Volvo extends Vehicle {
   }
 }
 
+export class Ford extends Vehicle {
+  constructor(private numberOfSeats: number) {
+    super();
+  }
+
+  getNumberOfSeats(): number {
+    return this.numberOfSeats;
+  }
+}
+
 ((): void => {
   const printCarSeats = (cars: Vehicle[]): void => {
     for (const car of cars) {
@@ -85,6 +97,11 @@ export class Volvo extends Vehicle {
         console.log(`Volvo has ${car.getNumberOfSeats()} seats.`);
         continue;
       }
+
+      if (car instanceof Ford) {
+        console.log(`Ford has ${car.getNumberOfSeats()} seats.`);
+        continue;
+      }
     }
   };
 
@@ -94,6 +111,7 @@ export class Volvo extends Vehicle {
     new Toyota(5),
     new Honda(9),
     new Volvo(3),
+    new Ford(6),
   ];
   printCarSeats(cars);
 })();
