@@ -7,10 +7,11 @@
 })(); */
 
 import { PostService } from './05-dependency-d';
-import { JsonDatabaseService } from './05-dependency-d';
+import { LocalDatabaseService, JsonDatabaseService } from './05-dependency-d';
 
 (async (): Promise<void> => {
-  const provider = new JsonDatabaseService();
+  // const provider = new JsonDatabaseService();
+  const provider = new LocalDatabaseService();
 
   const postService = new PostService(provider);
   const posts = await postService.getPosts();
