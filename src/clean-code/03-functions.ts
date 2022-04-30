@@ -85,7 +85,11 @@
   } // ✅ good: name does what it says and single responsibility principle
 
   // example 7: function to get pay amount
-  const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }) => {
+  const getPayAmountIfIsDeadAndIfIsSeparatedAndIfIsRetired = ({
+    isDead = false,
+    isSeparated = true,
+    isRetired = false,
+  }) => {
     let result;
 
     if (isDead) {
@@ -103,12 +107,16 @@
     }
 
     return result;
-  } // ❌ bad: nested if-else
+  }; // ❌ bad: nested if-else
 
-  const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }): number => {
+  const getPayAmount = ({
+    isDead = false,
+    isSeparated = true,
+    isRetired = false,
+  }): number => {
     if (isDead) return 1500;
     if (isSeparated) return 2500;
 
     return isRetired ? 3000 : 4000;
-  } // ✅ good: without nested if-else
+  }; // ✅ good: without nested if-else
 })();

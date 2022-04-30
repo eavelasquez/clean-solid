@@ -52,25 +52,27 @@
     throw new Error('Not implemented');
   } // ❌ bad: non-descriptive name
 
+  interface Book { }
+
   function getBooks(): Book[] {
     throw new Error('Not implemented');
   } // ✅ good: descriptive name and pluralized name
 
   // example 7: get all books by a specific URL
-  function BooksUrl(u: string) {
+  function BooksUrl(_u: string) {
     throw new Error('Not implemented');
   } // ❌ bad: non-descriptive name
 
-  function getBooksByUrl(url: string): Book[] {
+  function getBooksByUrl(_url: string): Book[] {
     throw new Error('Not implemented');
   } // ✅ good: descriptive name
 
   // example 8: get the area of a square based on its sides
-  function squareArea(s: number) {
+  function squareArea(_s: number) {
     throw new Error('Not implemented');
   } // ❌ bad: non-descriptive name
 
-  function getSquareArea(side: number): number {
+  function getSquareArea(_side: number): number {
     throw new Error('Not implemented');
   } // ✅ good: descriptive name
 
