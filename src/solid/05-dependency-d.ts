@@ -1,4 +1,3 @@
-
 import localPosts from '../data/local-database.json';
 
 export class LocalDatabaseService {
@@ -41,12 +40,13 @@ export interface Post {
 export class PostService {
   private posts: Post[] = [];
 
-  constructor() { }
+  constructor(private postProvider: JsonDatabaseService) { }
 
   async getPosts(): Promise<Post[]> {
     if (this.posts.length === 0) {
       // const posts = await new LocalDatabaseService().getFakePostsDatabase();
-      const posts = await new JsonDatabaseService().getPosts();
+      // const posts = await new JsonDatabaseService().getPosts();
+      const posts = await this.postProvider.getPosts();
       this.posts = posts;
     }
 
