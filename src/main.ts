@@ -16,7 +16,7 @@ app.innerHTML = `
   </p>
   <p>
     <a href="https://github.com/eavelasquez/clean-solid" target="_blank">
-      <img src="../assets/github-logo.png" alt="GitHub" />
+    <i class="fa fa-github" style="font-size:36px;color:black"></i>
     </a>
   </p>
 `
