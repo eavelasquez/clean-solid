@@ -1,6 +1,7 @@
+// ❌ Without Open-Close Principle
 // ❌ Without Liskov Substitution Principle
 // ❌ Without Dependency Inversion Principle
-import { LocalDatabaseService } from './05-dependency-c';
+import { LocalDatabaseService, JsonDatabaseService } from './05-dependency-c';
 
 export interface Post {
   body: string;
@@ -16,7 +17,8 @@ export class PostService {
 
   async getPosts(): Promise<Post[]> {
     if (this.posts.length === 0) {
-      const posts = await new LocalDatabaseService().getFakePostsDatabase();
+      // const posts = await new LocalDatabaseService().getFakePostsDatabase();
+      const posts = await new JsonDatabaseService().getPosts();
       this.posts = posts;
     }
 
