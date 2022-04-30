@@ -1,4 +1,3 @@
-
 import localPosts from '../data/local-database.json';
 
 export class LocalDatabaseService {

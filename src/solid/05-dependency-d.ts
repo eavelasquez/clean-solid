@@ -1,3 +1,6 @@
+// ✅ With Open-Close Principle
+// ✅ With Liskov Substitution Principle
+// ✅ With Dependency Inversion Principle
 import localPosts from '../data/local-database.json';
 
 export abstract class PostProvider {
@@ -39,7 +42,7 @@ export class WebApiPostService implements PostProvider {
 
   async getPosts(): Promise<Post[]> {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const posts = await response.json() as Post[];
+    const posts = (await response.json()) as Post[];
     return posts;
   }
 }

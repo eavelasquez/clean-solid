@@ -1,4 +1,5 @@
-// ❌ Without Open-Close Principle
+// ❌ Without Open-Close Principle: the PostService class is left open to
+// modification if the service is changed
 // ❌ Without Liskov Substitution Principle
 // ❌ Without Dependency Inversion Principle
 import { LocalDatabaseService, JsonDatabaseService } from './05-dependency-c';

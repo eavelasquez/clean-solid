@@ -1,3 +1,8 @@
+// note: uncomment the block without or with Dependency Inversion Principle
+// select the block (/* */) to test and press Ctrl+Shift+A to uncomment
+// and comment the other block
+
+// ❌ Without Dependency Inversion Principle
 /* import { PostService } from './05-dependency-b';
 
 (async (): Promise<void> => {
@@ -6,6 +11,7 @@
   console.log({ posts });
 })(); */
 
+// ✅ With Dependency Inversion Principle
 import {
   JsonDatabaseService,
   LocalDatabaseService,
