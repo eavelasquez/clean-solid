@@ -1,7 +1,7 @@
 export class LocalDatabaseService {
   constructor() { }
 
-  async getFakePosts(): Promise<any[]> {
+  async getFakePostsDatabase(): Promise<any[]> {
     return [
       {
         userId: 1,

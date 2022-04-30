@@ -14,7 +14,7 @@ export class PostService {
 
   async getPosts(): Promise<Post[]> {
     if (this.posts.length === 0) {
-      const posts = await new LocalDatabaseService().getFakePosts();
+      const posts = await new LocalDatabaseService().getFakePostsDatabase();
       this.posts = posts;
     }
 
