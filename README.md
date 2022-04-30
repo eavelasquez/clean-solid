@@ -26,6 +26,49 @@ or
 npm run dev
 ```
 
+### Structure of the project
+
+```
+clean-solid
+├── docs
+│    └── slides.pdf
+├── src
+│    ├── clean-code
+│    │    ├── 01-names.ts
+│    │    ├── 02-name-types.ts
+│    │    ├── 03-functions.ts
+│    │    ├── 04-nested-if-else.ts
+│    │    ├── 05-dry.ts
+│    │    ├── 06-classes-a.ts
+│    │    ├── 06-classes-b.ts
+│    │    ├── 06-classes-c.ts
+│    │    └── 07-srp.ts
+│    ├── code-smell
+│    │    ├── 01-singleton.js
+│    │    ├── 02-high-coupling.ts
+│    │    └── 03-high-coupling.ts
+│    ├── data
+│    │    └── local-database.json
+│    ├── solid
+│    │    ├── 01-srp.ts
+│    │    ├── 02-open-close-a.ts
+│    │    ├── 02-open-close-b.ts
+│    │    ├── 02-open-close-c.ts
+│    │    ├── 03-liskov-a.ts
+│    │    ├── 03-liskov-b.ts
+│    │    ├── 03-liskov-c.ts
+│    │    ├── 04-segregation-a.ts
+│    │    ├── 04-segregation-b.ts
+│    │    ├── 05-dependency-a.ts
+│    │    ├── 05-dependency-b.ts
+│    │    ├── 05-dependency-c.ts
+│    │    └── 05-dependency-d.ts
+│    ├── main.ts
+│    └── style.css
+├── index.html
+└── package.json
+```
+
 ## What is Clean Code?
 
 Clean Code is a programming style that follows a set of rules to write code.

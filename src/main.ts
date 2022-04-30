@@ -11,4 +11,7 @@ app.innerHTML = `
   <span>
     Press <pre>Command+Option+J</pre> (Mac) or <pre>Control+Shift+J</pre> (Windows, Linux, ChromeOS) to open the Console.
   </span>
+  <p>
+    To test the exercises or files, import into the <code>src/main.ts</code>.
+  </p>
 `
