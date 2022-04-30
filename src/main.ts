@@ -14,4 +14,9 @@ app.innerHTML = `
   <p>
     To test the exercises or files, import into the <code>src/main.ts</code>.
   </p>
+  <p>
+    <a href="https://github.com/eavelasquez/clean-solid" target="_blank">
+      <img src="../assets/github-logo.png" alt="GitHub" />
+    </a>
+  </p>
 `
